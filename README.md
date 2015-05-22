@@ -7,7 +7,9 @@ Attach LMWeb Finder to HTML file with script tag:<br />
 Also you need to add a short script in the page you want to search: <br />
 ``` window.onload = function () {	original = document.getElementById('findIn').innerHTML; lastMatch = 0; };```
 
-All content you want to search for must be inside an element with ID: "findId", but you can change this ID from code. This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to use it.<br />Colors used to highlight matches are yellow for all coincidences and red for focused coincidence, both can be changed.<br />
+All content you want to search for must be inside an element with ID: "findId", but you can change this ID from code. This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to use it.
+
+Colors used to highlight matches are yellow for all coincidences and red for focused coincidence, both can be changed.<br />
 ``` primaryColor = "#FFFF00"; //color for all matches```<br />```secondaryColor = "#FF0000"; //color for focused matched ``` <br />
 
 There is an example for you to view how it works.
