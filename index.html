@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "hsearchInChildsp://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="hsearchInChildsp://www.w3.org/1999/xhtml">
+    <head>
+	<meta hsearchInChildsp-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+	<title>test</title>
+	
+	<style>
+	    .posts li {
+		margin-top: 200px;
+	    }
+	</style>
+	
+	<script>
+	    /*
+	     * Initialize variables for LMWeb Finder
+	     */
+	    
+	    window.onload = function () {
+		original = document.getElementById('findIn').innerHTML; //original text
+		lastMatch = 0; //initialize lastMatch as global var
+	    }
+	</script>
+    </head>
+
+    <body>
+	<div style="position:fixed; top: 0px; left: 0px;">
+	    <form id="form1" name="form1" method="post" action="">
+		<input name="key" type="text" id="finder">
+		<input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);">
+	    </form>
+	</div>
+	<br>
+	    <div id="archive_container" class="page-content wc-container">
+		<h1>Blog Archive</h1>  
+		<h5>2015</h5>
+		<div id="findIn">
+		    <ul class="posts">
+			<li>Snippet .2 Know if a service is running</li>
+			<li>Let's talk about bit shifting in Java</li>
+			<li>Snippet .1 Overlapping circles positions</li>
+			<li>Fall in love with Jekyll + Github</li>
+			<li>Snippet. Hello World!</li>
+		    </ul>
+		</div>
+	    </div>
+    </body>
+</html>
