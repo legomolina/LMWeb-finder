@@ -25,11 +25,11 @@ Second you need to create an element where you can write inside it (input, texta
 ```html
 <input type="text" id="finder" onkeydown="pressKey(this.value, event);">
 ```
-And add an element with "onclick" event to launch the clean script (button, a, span...) with from last input element to clean input and remove highlights:
+And add an element with "onclick" event to launch the clean script (button, a, span...) in order to clean input and remove the highlights:
 ```html
 <input type="button" value="X" onclick="clean(document.getElementById('finder'));"> 
 ```
-And add an element with "onclick" event to launch the script (button, a, span...) with value from last input to send to the search function:
+Add an element with "onclick" event to launch the script (button, a, span...) taking the value of the input to send to the search function:
 ```html
 <input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);"> 
 ```
