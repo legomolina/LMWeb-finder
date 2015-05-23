@@ -17,7 +17,6 @@ Also you need to create a little script into your html head in order to create t
 <script>
     window.onload = function () { 
         original = document.getElementById('findIn').innerHTML; //original text
-        lastMatch = 0; //initialize lastMatch as global var
     } 
 </script>
 ```
