@@ -1,7 +1,7 @@
 # LMWeb Finder
 
 ##### Introduction
-LMWeb Finder is a little library that improve native web browser finder (Crtl + F).<br />With LMWeb Finder you can customize matches colors and area to search for. Also, you can put this finder where you want in your web since it works from a text input and a button.
+LMWeb Finder is a little library that improves native web browser finder (Crtl + F).<br />With LMWeb Finder you can customize colors from highlighted matches and the area to search for. Also, you can put this finder where you want in your web since it works from a text input and a button.
 
 ##### Installation
 <b>This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to use it.</b><br />
@@ -26,16 +26,16 @@ Second you need to create an element where you can write inside it (input, texta
 ```html
 <input type="text" id="finder" onkeydown="pressKey(this.value, event);">
 ```
-And add a element with "onclick" event to launch the script (button, a, span...) with value from last input to send to the search function:
+And add an element with "onclick" event to launch the script (button, a, span...) with value from last input to send to the search function:
 ```html
 <input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);"> 
 ```
 Finally you need to put all the content you want to search for inside an element (div, body, html...) with any ID:
 ```html
 <div id="findIn"> 
- /* Content to search for */ 
- <ul> 
-	  <li>You</li> 
+	/* Content to search for */ 
+ 	<ul> 
+	 	<li>You</li> 
 		<li>Can</li> 
 		<li>Find</li> 
 		<li>In</li> 
