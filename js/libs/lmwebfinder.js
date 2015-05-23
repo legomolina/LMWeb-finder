@@ -96,3 +96,8 @@ function search(textToFind) {
 function reset() {
     document.getElementById(findId).innerHTML = original; //return the text to original version
 }
+
+function clean(searchInput) {
+    searchInput.value = ""; //clears search input
+    reset(); //return the text to original verion
+}
