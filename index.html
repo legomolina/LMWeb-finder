@@ -6,7 +6,6 @@
 	<script src="js/libs/lmwebfinder.js" type="text/javascript"></script>
 	
 	<title>Test LMWeb Finder</title>
-	
 	<script>
 	    /*
 	     * Initialize variables for LMWeb Finder
@@ -14,7 +13,6 @@
 	    
 	    window.onload = function () {
 		original = document.getElementById('findIn').innerHTML; //original text
-		lastMatch = 0; //initialize lastMatch as global var
 	    }
 	</script>
     </head>
@@ -22,7 +20,7 @@
     <body>
 	<!-- Finder -->
 	<div style="position:fixed; top: 0px; left: 0px;">
-	    <input name="key" type="text" id="finder" onkeydown="pressKey(this.value, event)">
+	    <input name="key" type="text" id="finder" onkeydown="pressKey(this.value, event);">
 	    <input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);">
 	</div>
 	<br>

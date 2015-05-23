@@ -9,9 +9,20 @@
  * *******************************************************
  */
 
+/*
+ * CONFIGURARTION
+ */
+
 primaryColor = "#FFFF00"; //color for all matches
 secondaryColor = "#FF0000"; //color for focused matched
-findId = "findId"; //The text you want to search in must be inside an element with this id
+findId = "findIn"; //The text you want to search in must be inside an element with this id
+
+/*
+ * END CONFIGURATION
+ */
+
+lastMatch = 0; //initialize lastMatch as global var
+running = false; //initizlize running as global var
 
 function pressKey(textToFind, e) {
     var evt = e ? e : event;
@@ -68,10 +79,16 @@ function search(textToFind) {
 
     var position = document.getElementsByClassName("goFind")[lastMatch].offsetTop; //it captures pixels between top of the page and the showing match
     document.getElementsByClassName("goFind")[lastMatch].style.backgroundColor = secondaryColor; //changes the color of the actual match in order to diffenciate from others
-
-    $('body,html').animate({//animates body to go to match position
-	scrollTop: position - 50 + 'px'
-    }, 600);
+    
+    if(!running) { //this disables animation if it's running other one
+	running = true
+	$('body, html').animate({//animates body to go to match position
+	    scrollTop: position - 50 + 'px'
+	}, 600, function() {running = false;});
+    }
+    else { //if there is an animation running move body to position without animation
+	document.body.style.top = position - 50 + 'px';
+    }
 
     lastMatch++; //increments lastMatch for the next time we click in find button
 }
