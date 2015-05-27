@@ -1,4 +1,4 @@
-# LMWeb Finder
+# LMWeb Finder (v1.3)
 
 ##### Introduction
 LMWeb Finder is a little library that improves native web browser finder (Crtl + F).<br />With LMWeb Finder you can customize colors from highlighted matches and the area to search for. Also, you can put this finder where you want in your web since it works from a text input and a button.
