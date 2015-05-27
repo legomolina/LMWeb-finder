@@ -1,4 +1,4 @@
-# LMWeb Finder
+# LMWeb Finder (v1.3)
 
 ##### Introduction
 LMWeb Finder is a little library that improves native web browser finder (Crtl + F).<br />With LMWeb Finder you can customize colors from highlighted matches and the area to search for. Also, you can put this finder where you want in your web since it works from a text input and a button.
@@ -12,7 +12,7 @@ To use LMWeb Finder you need to import js file into your html:
 ```javascript
     <script src="lmwebfinder.js" type="text/javascript"></script> 
 ```
-Also you need to create a little script into your html head in order to create two global variables:
+Also you need to create a little script into your html head in order to create a global variable:
 ```javascript
 <script>
     window.onload = function () { 
@@ -20,18 +20,24 @@ Also you need to create a little script into your html head in order to create t
     } 
 </script>
 ```
+Finally, make an instance of LMWebFinder class anywhere in your page:
+```javascript
+<script>
+	LMWebFinder = new LMWebFinder();
+</script>
+```
 <br />
 Second you need to create an element where you can write inside it (input, textarea...) and put an "onkeydown" event with element.value and event parameters to use it with "Enter" key:
 ```html
-<input type="text" id="finder" onkeydown="pressKey(this.value, event);">
+<input type="text" id="finder" onkeydown="LMWebFinder.pressKey(this.value, event);">
 ```
 And add an element with "onclick" event to launch the clean script (button, a, span...) in order to clean input and remove the highlights:
 ```html
-<input type="button" value="X" onclick="clean(document.getElementById('finder'));"> 
+<input type="button" value="X" onclick="LMWebFinder.clean(document.getElementById('finder'));"> 
 ```
 Add an element with "onclick" event to launch the script (button, a, span...) taking the value of the input to send to the search function:
 ```html
-<input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);"> 
+<input type="button" value="Find Next" onclick="LMWebFinder.search(document.getElementById('finder').value);"> 
 ```
 Finally you need to put all the content you want to search for inside an element (div, body, html...) with any ID:
 ```html
@@ -51,18 +57,24 @@ Finally you need to put all the content you want to search for inside an element
  ```
  <br />
 #####Configuration
-As I said before you can customize colors from highlighted matches. You only need to change two variables in lmwebfinder.js to make this. Default colors are yellow (#FFFF00) for all matches and red (#FF0000) for focused match. Colors can be set in hexadecimal form or allowed web names for colors.<br />
-All matches color is line 12: 
+As I said before you can customize colors from highlighted matches. You only need to change two variables to make this. Default colors are yellow (#FFFF00) for all matches and red (#FF0000) for focused match. Colors can be set in hexadecimal form or allowed web names for colors.<br />
+Change primary color:
 ```javascript
-primaryColor = "#FFFF00"; //color for all matches
+<script>
+	LMWebFinder.primaryColor = "new primary color";
+</script>
 ```
-Focused match color is line 12:
+Change secondary color:
 ```javascript
-secondaryColor = "#FF0000"; //color for focused matched
+<script>
+	LMWebFinder.secondaryColor = "new secondary color";
+</script>
 ```
-Also you can change the element id in case you don't like the default one (findIn) or you have already in use changing var in line 14:
+Also you can change the element id in case you don't like the default one (findIn) or you have it already in use:
 ```javascript
-findId = "findIn"; //The text you want to search in must be inside an element with this id
+<script>
+	LMWebFinder.findId = "new ID";
+</script>
 ```
 <br /> 
 There is an example for you to view how it works.<br /> 
