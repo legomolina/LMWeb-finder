@@ -12,7 +12,9 @@
 	     */
 	    
 	    window.onload = function () {
+                LMWebFinder = new LMWebFinder();
 		original = document.getElementById('findIn').innerHTML; //original text
+                LMWebFinder.primaryColor = "blue";
 	    }
 	</script>
     </head>
@@ -20,9 +22,9 @@
     <body>
 	<!-- Finder -->
 	<div style="position:fixed; top: 0px; left: 0px;">
-	    <input name="key" type="text" id="finder" onkeydown="pressKey(this.value, event);">	
-	    <input type="button" value="X" onclick="clean(document.getElementById('finder'));">
-	    <input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);">
+	    <input name="key" type="text" id="finder" onkeydown="LMWebFinder.pressKey(this.value, event);">	
+	    <input type="button" value="X" onclick="LMWebFinder.clear(document.getElementById('finder'));">
+	    <input type="button" value="Find Next" onclick="LMWebFinder.search(document.getElementById('finder').value);">
 	</div>
 	<br>
 	    <div id="archive_container">
