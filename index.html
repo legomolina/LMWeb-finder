@@ -12,36 +12,19 @@
 	     */
 	    
 	    window.onload = function () {
+                LMWebFinder = new LMWebFinder();
 		original = document.getElementById('findIn').innerHTML; //original text
+                LMWebFinder.primaryColor = "blue";
 	    }
 	</script>
-	<style>
-	    .clean {
-		margin: 0px;
-		border-left: 1px solid #2b2b2b;
-		cursor: pointer;
-		color: #da4939;
-		font-weight: bold;
-		height: 20px;
-		width: 20px;
-		line-height: 15px;
-		position: fixed;
-		top: 1px;
-		left: 150px;
-		text-align: center;
-	    }
-	    .clean:hover {
-		text-decoration: underline;
-	    }
-	</style>
     </head>
 
     <body>
 	<!-- Finder -->
 	<div style="position:fixed; top: 0px; left: 0px;">
-	    <input name="key" type="text" id="finder" onkeydown="pressKey(this.value, event);">	
-	    <input type="button" value="Find Next" onclick="search(document.getElementById('finder').value);">
-	    <div class="clean" onclick="clean(document.getElementById('finder'));">x</div>
+	    <input name="key" type="text" id="finder" onkeydown="LMWebFinder.pressKey(this.value, event);">	
+	    <input type="button" value="X" onclick="LMWebFinder.clear(document.getElementById('finder'));">
+	    <input type="button" value="Find Next" onclick="LMWebFinder.search(document.getElementById('finder').value);">
 	</div>
 	<br>
 	    <div id="archive_container">
