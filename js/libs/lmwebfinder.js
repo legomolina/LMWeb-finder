@@ -82,7 +82,7 @@ function LMWebFinder() {
         document.getElementsByClassName("goFind")[lastMatch].style.backgroundColor = this.secondaryColor; //changes the color of the actual match in order to diffenciate from others
 
         if (!running) { //this disables animation if it's running other one
-            running = true
+            running = true;
             $('body, html').animate({//animates body to go to match position
                 scrollTop: position - 50 + 'px'
             }, 600, function () {
