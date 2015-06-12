@@ -6,7 +6,7 @@ LMWeb Finder is a little library that improves native web browser finder (Crtl +
 ##### Installation
 <b>This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to use it.</b><br />
 ```javascript
-    <script src="js/libs/jquery/jquery.js" type="text/javascript"></script>
+    <script src="jquery.js" type="text/javascript"></script>
 ```
 To use LMWeb Finder you need to import js file into your html:
 ```javascript
