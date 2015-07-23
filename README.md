@@ -4,7 +4,7 @@
 LMWeb Finder is a little library that improves native web browser finder (Crtl + F).<br />With LMWeb Finder you can customize colors from highlighted matches and the area to search for. Also, you can put this finder where you want in your web since it works from a text input and a button.
 
 ##### Installation
-<b>This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to use it.</b><br />
+<b>This library needs <a href="https://jquery.com/" target="_blank">Jquery</a> to work.</b><br />
 ```javascript
     <script src="jquery.js" type="text/javascript"></script>
 ```
