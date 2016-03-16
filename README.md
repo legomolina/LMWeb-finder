@@ -77,7 +77,6 @@ Also you can change the element id in case you don't like the default one (findI
 </script>
 ```
 <br /> 
-There is an example for you to view how it works.<br /> 
-And you can see a live example in this blog: <a href="http://grenderg.github.io/blog/" target="_blank">GrenderG blog</a>.<br />
+There is an example for you to view how it works.<br /></a>.<br />
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">LMWebFinder</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">legomolina</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.
