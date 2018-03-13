@@ -40,6 +40,7 @@ Add an element with "onclick" event to launch the script (button, a, span...) ta
 <input type="button" value="Find Next" onclick="LMWebFinder.search(document.getElementById('finder').value);"> 
 ```
 Finally you need to put all the content you want to search for inside an element (div, body, html...) with any ID:
+
 ```html
 <div id="findIn"> 
 	/* Content to search for */ 
@@ -52,30 +53,38 @@ Finally you need to put all the content you want to search for inside an element
 	</ul>
     <p>You can search in paragraphs also!</p> 
     Obviusly you can search in plain text
-    <style>You cant find inside style, script, meta, title and link tags</style>
+    <style>You can't find inside style, script, meta, title and link tags</style>
  </div>
  ```
  <br />
-#####Configuration
+ 
+##### Configuration
+
 As I said before you can customize colors from highlighted matches. You only need to change two variables to make this. Default colors are yellow (#FFFF00) for all matches and red (#FF0000) for focused match. Colors can be set in hexadecimal form or allowed web names for colors.<br />
 Change primary color:
+
 ```javascript
 <script>
 	LMWebFinder.primaryColor = "new primary color";
 </script>
 ```
+
 Change secondary color:
+
 ```javascript
 <script>
 	LMWebFinder.secondaryColor = "new secondary color";
 </script>
 ```
+
 Also you can change the element id in case you don't like the default one (findIn) or you have it already in use:
+
 ```javascript
 <script>
 	LMWebFinder.findId = "new ID";
 </script>
 ```
+
 <br /> 
 There is an example for you to view how it works.<br /></a>.<br />
 
